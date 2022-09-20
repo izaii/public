@@ -280,15 +280,14 @@ let tek = `*${ucapan()} ${conn.getName(m.sender)}*
 ┊↬✗• *ᴛᴀɢs:* @${m.sender.split`@`[0]}
 ┊↬✗• *sᴛᴀᴛᴜs:* ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
 ┊↬✗• *ᴘʀᴇᴍɪᴜᴍ:* ${usrs.premiumTime > 1 ? 'Yes': 'No'}
+┊↬✗• *ʟɪᴍɪᴛ:* ${usrs.limit}
+┊↬✗• *ʟᴇᴠᴇʟ:* ${usrs.level}
 ┗–––––––––––––––––✥
 ┌–––––––––––––––––✥
 ┊   「 *S t a t u s  I n f o 比* 」
 ┊↬✗• *ᴜᴘᴛɪᴍᴇ:* ${mpt}
 ┊↬✗• *ᴛɪᴍᴇ:* ${moment.tz('Asia/Jakarta').format('HH')} H  ${moment.tz('Asia/Jakarta').format('mm')} M  ${moment.tz('Asia/Jakarta').format('ss')} S
-┊↬✗• *ᴜsᴇʀs:* ${Object.keys(global.db.data.users).length}
-┊↬✗• *ʟɪᴍɪᴛ:* ${usrs.limit}
-┊↬✗• *ʟᴇᴠᴇʟ:* ${usrs.level}
-┊↬✗• *ʀᴏʟᴇ:* ${usrs.role}${usrs.premiumTime > 1 ? `
+┊↬✗• *ᴜsᴇʀs:* ${Object.keys(global.db.data.users).length} `
 ┗––––––––––––––––––✥
 ┊↬✗• *ᴇxᴘɪʀᴇᴅ ᴘʀᴇᴍɪᴜᴍ:*
 ${clockStringP(usrs.premiumTime - new Date())}` : ''}
@@ -298,7 +297,7 @@ const listMessage = {
   footer: '📮 *Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner',
   mentions: await conn.parseMention(tek),
   title: `${htki} *LIST MENU* ${htka}`,
-  buttonText: `CLICK HERE ⎙`, 
+  buttonText: `FAIZ GG ⎙`, 
   sections
 }
   if (teks == '404') {
@@ -551,7 +550,7 @@ handler.help = ['menu', 'help', '?']
 handler.tags = ['main']
 handler.command = /^(menu|help|\?)$/i
 
-handler.register = false
+handler.register = true
 handler.exp = 3
 
 export default handler
