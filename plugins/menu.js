@@ -551,7 +551,6 @@ handler.tags = ['main']
 handler.command = /^(menu|help|\?)$/i
 
 handler.register = false
-handler.unreg = true
 handler.exp = 3
 
 export default handler
