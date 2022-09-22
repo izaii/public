@@ -216,7 +216,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
     let mpt = clockString(_mpt)
       const sections = [
    {
-	title: `${htki} MAIN ${htka}`,
+	title: `${htki} ɪɴғᴏ ${htka}`,
 	rows: [
 	    {title: `⚡ ${pmenus} SPEED BOT`, rowId: ".speed", description: "Menampilkan kecepatan respon BOT"},
 	    {title: `💌 ${pmenus} OWNER BOT`, rowId: ".owner", description: "Menampilkan List owner BOT"},
@@ -232,10 +232,10 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	},{
 	title: `${htki} MENU ${htka}`,
 	rows: [
-	    {title: `💬 ${pmenus} All`, rowId: ".? all", description: "Menampilkan Semua command BOT"},
-	    {title: `🌱 ${pmenus} Rpg`, rowId: ".? rpg", description: "Game Epic Rpg!"},
-	{title: `✨ ${pmenus} Exp`, rowId: ".? xp", description: "Ayo tingkatkan pangkat mu!"},
-	{title: `🎮 ${pmenus} Game`, rowId: ".? game", description: "Gamenya seru seru lho >-<"},
+	    {title: `💬 ${pmenus} sᴇᴍᴜᴀ ᴍᴇɴᴜ`, rowId: ".? all", description: "Menampilkan Semua command BOT"},
+	    {title: `🌱 ${pmenus} ʀᴘɢ ᴍᴇɴʜ`, rowId: ".? rpg", description: "Game Epic Rpg!"},
+	{title: `✨ ${pmenus} ᴇxᴘ ᴍᴇɴᴊ`, rowId: ".? xp", description: "Ayo tingkatkan pangkat mu!"},
+	{title: `🎮 ${pmenus} ɢᴀᴍᴇ ᴍᴅɴᴊ`, rowId: ".? game", description: "Gamenya seru seru lho >-<"},
 	{title: `🧩 ${pmenus} Fun`, rowId: ".? fun", description: "Fitur yang aman untuk keluarga"},
 	{title: `🐚 ${pmenus} Kerang`, rowId: ".? kerangajaib", description: "Tanyakan pada ketua club"},
 	{title: `📑 ${pmenus} Quotes`, rowId: ".? quotes", description: "Random Inspirasi"},
@@ -247,36 +247,39 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	{title: `🌎 ${pmenus} Internet`, rowId: ".? internet", description: "Cari sesuatu diBOT"},
   {title: `🌎 ${pmenus} Berita`, rowId: ".? berita", description: "Cari berita terupdate"},
 	{title: `📩 ${pmenus} Downloaders`, rowId: ".? downloader", description: "Download sesuatu diBOT"},
-	{title: `🎨 ${pmenus} Stikers`, rowId: ".? stiker", description: "Buat Sticker diBOT"},
-	{title: `✏️ ${pmenus} Nulis`, rowId: ".? nulis", description: "Nulis kok males kak?"},
-	{title: `🎧 ${pmenus} Audio`, rowId: ".? audio", description: "Ubah Audio dengan Filter"},
-  {title: `🎧 ${pmenus} Sound Menu`, rowId: ".soundmenu", description: "Kumpulan 120 Sound"},
-	{title: `🏢 ${pmenus} Group`, rowId: ".? group", description: "Only Groups"},
-	{title: `👑 ${pmenus} Admin`, rowId: ".? admin", description: "Only Admin Group"},
-	{title: `🗂️ ${pmenus} Database`, rowId: ".? database", description: "Simpan sesuatu diBOT"},
-	{title: `🛠️ ${pmenus} Tools`, rowId: ".? tools", description: "Mungkin tools ini bisa membantu?"},
-	{title: `ℹ️ ${pmenus} Info`, rowId: ".? info", description: "Info info BOT"},
-	{title: `👩‍💻 ${pmenus} Owner`, rowId: ".? owner", description: "Owner Only!"},
+	{title: `🎨 ${pmenus} sᴛɪᴋᴇʀs ᴍᴇɴᴜ`, rowId: ".? stiker", description: "Buat Sticker diBOT"},
+	{title: `✏️ ${pmenus} ɴᴜʟɪs ᴍᴇɴᴜ`, rowId: ".? nulis", description: "Nulis kok males kak?"},
+	{title: `🎧 ${pmenus} ᴀᴜᴅɪᴏ ᴍᴇɴᴜ`, rowId: ".? audio", description: "Ubah Audio dengan Filter"},
+  {title: `🎧 ${pmenus} sᴏᴜɴᴅ ᴍᴇɴᴜ`, rowId: ".soundmenu", description: "Kumpulan 120 Sound"},
+	{title: `🏢 ${pmenus} ɢʀᴜᴘ ᴍᴇɴᴜ`, rowId: ".? group", description: "Only Groups"},
+	{title: `👑 ${pmenus} ᴀᴅᴍɪᴍ ᴍᴇɴᴜ`, rowId: ".? admin", description: "Only Admin Group"},
+	{title: `🗂️ ${pmenus} ᴅᴀᴛᴀʙᴀsᴇ ᴍᴇɴʜ`, rowId: ".? database", description: "Simpan sesuatu diBOT"},
+	{title: `🛠️ ${pmenus} ᴛᴏᴏʟs ᴍᴇɴᴜ`, rowId: ".? tools", description: "Mungkin tools ini bisa membantu?"},
+	{title: `ℹ️ ${pmenus} ɪɴғᴏ ᴍᴇɴᴜ`, rowId: ".? info", description: "Info info BOT"},
+	{title: `👩‍💻 ${pmenus} ᴏᴡɴᴇʀ ᴍᴇɴʜ`, rowId: ".? owner", description: "Owner Only!"},
 	{title: `❓ ${pmenus} No Category`, rowId: ".? nocategory", description: "Fitur tanpa kategory!"},
 	]
   },
 ]
 
 let usrs = db.data.users[m.sender]
-let tek = `*${ucapan()} ${conn.getName(m.sender)}*
+let tek = `
 ┌–––––––––––––––––✥
-┊   「 *U s e r  I n f o 克* 」
+┊${ucapan()} ${conn.getName(m.sender)}*
+┌「 *U s e r  I n f o 克* 」
 ┊↬✗• *ɴᴀᴍᴇ:* ${usrs.registered ? usrs.name : conn.getName(m.sender)}
-┊↬✗• *ᴛᴀɢs:* @${m.sender.split`@`[0]}
+┊↬✗• *ᴛᴀɢs:* @${m.sender.split`@`[0]
+┊↬✗• *ʟɪᴍɪᴛ:* ${usrs.limit}
 ┊↬✗• *sᴛᴀᴛᴜs:* ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
 ┊↬✗• *ᴘʀᴇᴍɪᴜᴍ:* ${usrs.premiumTime > 1 ? 'Yes': 'No'}
+┊↬✗• *ʟᴇᴠᴇʟ:* ${usrs.level}
+┊↬✗• *ʀᴏʟᴇ:* ${usrs.role}${usrs.premiumTime > 1 ? `
 ┗–––––––––––––––––✥
 ┌–––––––––––––––––✥
 ┊   「 *S t a t u s  I n f o 比* 」
 ┊↬✗• *ᴜᴘᴛɪᴍᴇ:* ${mpt}
 ┊↬✗• *ᴛɪᴍᴇ:* ${moment.tz('Asia/Jakarta').format('HH')} H  ${moment.tz('Asia/Jakarta').format('mm')} M  ${moment.tz('Asia/Jakarta').format('ss')} S
 ┊↬✗• *ᴜsᴇʀs:* ${Object.keys(global.db.data.users).length}
-┊↬✗• *ʟɪᴍɪᴛ:* ${usrs.limit}
 ┊↬✗• *ʟᴇᴠᴇʟ:* ${usrs.level}
 ┊↬✗• *ʀᴏʟᴇ:* ${usrs.role}${usrs.premiumTime > 1 ? `
 ┗––––––––––––––––––✥
