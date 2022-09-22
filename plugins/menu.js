@@ -8,43 +8,34 @@ import fetch from 'node-fetch'
 
 const defaultMenu = {
   before: `
-%dash
-%m1 *U S E R*
-%m2 *Name:* %name
-%m2 *Tag:* %tag
-%m2 *Status:* %prems
-%m2 *Limit:* %limit
-%m2 *Money:* %money
-%m2 *Role:* %role
-%m2 *Level:* %level [ %xp4levelup Xp For Levelup]
-%m2 *Xp:* %exp / %maxexp
-%m2 *Total Xp:* %totalexp
-%m3
-
-%m1 *T O D A Y*
-%m2 *%ucpn*
-%m2 *Days:* %week %weton
-%m2 *Date:* %date
-%m2 *Islamic Date:* %dateIslamic
-%m2 *Time:* %wib
-%m3
-
-%m1 *I N F O*
-%m2 *Bot Name:* %me
-%m2 *Mode:* %mode
-%m2 *Platform:* %platform
-%m2 *Type:* Node.Js
-%m2 *Baileys:* Multi Device
-%m2 *Prefix:* [ *%_p* ]
-%m2 *Uptime:* %muptime
-%m2 *Database:* %rtotalreg dari %totalreg
-%m3
-
-%m1 *I N F O  C M D* 
-%m4 *Ⓟ* = Premium
-%m4 *Ⓛ* = Limit
-%m3
-%readmore
+┌「 *INFO USERS* 」
+┊↬✗• *Name:* %name
+┊↬✗• *Tag:* %tag
+┊↬✗• *Status:* %prems
+┊↬✗• *Limit:* %limit
+┊↬✗• *Money:* %money
+┊↬✗• *Role:* %role
+┊↬✗• *Level:* %level [ %xp4levelup Xp For Levelup]
+┊↬✗• *Xp:* %exp / %maxexp
+┊↬✗• *Total Xp:* %totalexp
+┗–––––––––––––––––✥
+┌「 *TODAY* 」
+┊↬✗• *%ucpn*
+┊↬✗• *Days:* %week %weton
+┊↬✗• *Date:* %date
+┊↬✗• *Islamic Date:* %dateIslamic
+┊↬✗• *Time:* %wib
+┗–––––––––––––––––✥
+┌「 *INFO BOT* 」
+┊↬✗• *Bot Name:* %me
+┊↬✗• *Mode:* %mode
+┊↬✗• *Platform:* %platform
+┊↬✗• *Type:* Node.Js
+┊↬✗• *Baileys:* Multi Device
+┊↬✗• *Prefix:* [ *%_p* ]
+┊↬✗• *Uptime:* %muptime
+┊↬✗• *Database:* %rtotalreg dari %totalreg
+┗–––––––––––––––––✥
 `.trimStart(),
   header: '%cc *%category* %c1',
   body: '%c2 %cmd %isPremium %islimit',
@@ -218,35 +209,35 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
    {
 	title: `${htki} ɪɴғᴏ ${htka}`,
 	rows: [
-	    {title: `⚡ ${pmenus} SPEED BOT`, rowId: ".speed", description: "Menampilkan kecepatan respon BOT"},
-	    {title: `💌 ${pmenus} OWNER BOT`, rowId: ".owner", description: "Menampilkan List owner BOT"},
-	    {title: `📔 ${pmenus} SCRIPT BOT`, rowId: ".sc", description: `Source Code ${namebot}`},
+	    {title: `⚡ ${pmenus} sᴘᴇᴇᴅ ʙᴏᴛ`, rowId: ".speed", description: "Menampilkan kecepatan respon BOT"},
+	    {title: `💌 ${pmenus} ᴏᴡɴᴇʀ ʙᴏᴛ`, rowId: ".owner", description: "Menampilkan List owner BOT"},
+	    {title: `📔 ${pmenus} sᴄʀɪᴘᴛ ʙᴏᴛ`, rowId: ".sc", description: `Source Code ${namebot}`},
 	]
     },{
-	title: `${htki} SUPPORT ${htka}`,
+	title: `${htki} sᴜᴘᴘᴏʀᴛ ${htka}`,
 	rows: [
-	    {title: `🔖 ${pmenus} SEWA`, rowId: ".sewa", description: "Menampilkan list harga sewa BOT"},
-	    {title: `🌟 ${pmenus} BUY PREMIUM`, rowId: ".premium", description: "Menampilkan list harga premium"},
-	    {title: `💹 ${pmenus} DONASI`, rowId: ".donasi", description: 'Support BOT agar lebih fast respon'},
+	    {title: `🔖 ${pmenus} sᴇᴡᴀ`, rowId: ".sewa", description: "Menampilkan list harga sewa BOT"},
+	    {title: `🌟 ${pmenus} ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ`, rowId: ".premium", description: "Menampilkan list harga premium"},
+	    {title: `💹 ${pmenus} ᴅᴏɴᴀsɪ`, rowId: ".donasi", description: 'Support BOT agar lebih fast respon'},
 	]
 	},{
 	title: `${htki} MENU ${htka}`,
 	rows: [
 	    {title: `💬 ${pmenus} sᴇᴍᴜᴀ ᴍᴇɴᴜ`, rowId: ".? all", description: "Menampilkan Semua command BOT"},
-	    {title: `🌱 ${pmenus} ʀᴘɢ ᴍᴇɴʜ`, rowId: ".? rpg", description: "Game Epic Rpg!"},
-	{title: `✨ ${pmenus} ᴇxᴘ ᴍᴇɴᴊ`, rowId: ".? xp", description: "Ayo tingkatkan pangkat mu!"},
-	{title: `🎮 ${pmenus} ɢᴀᴍᴇ ᴍᴅɴᴊ`, rowId: ".? game", description: "Gamenya seru seru lho >-<"},
-	{title: `🧩 ${pmenus} Fun`, rowId: ".? fun", description: "Fitur yang aman untuk keluarga"},
-	{title: `🐚 ${pmenus} Kerang`, rowId: ".? kerangajaib", description: "Tanyakan pada ketua club"},
-	{title: `📑 ${pmenus} Quotes`, rowId: ".? quotes", description: "Random Inspirasi"},
-	{title: `⛩️ ${pmenus} Anime`, rowId: ".? anime", description: "Kamu wibu ya bang?"},
-	{title: `🔞 ${pmenus} Nsfw`, rowId: ".? nsfw", description: "Tch, dasar sagne"},
-	{title: `🌟 ${pmenus} Premium`, rowId: ".? premium", description: "Only premium Users"},
-	{title: `🎭 ${pmenus} Anonymous Chats`, rowId: ".? anonymous", description: "Bicara dengan orang tidak dikenal"},
-	{title: `📖 ${pmenus} Al-Quran`, rowId: ".? quran", description: "Tobat yuk kak"},
-	{title: `🌎 ${pmenus} Internet`, rowId: ".? internet", description: "Cari sesuatu diBOT"},
-  {title: `🌎 ${pmenus} Berita`, rowId: ".? berita", description: "Cari berita terupdate"},
-	{title: `📩 ${pmenus} Downloaders`, rowId: ".? downloader", description: "Download sesuatu diBOT"},
+	    {title: `🌱 ${pmenus} ʀᴘɢ ᴍᴇɴᴜ`, rowId: ".? rpg", description: "Game Epic Rpg!"},
+	{title: `✨ ${pmenus} ᴇxᴘ ᴍᴇɴᴜ`, rowId: ".? xp", description: "Ayo tingkatkan pangkat mu!"},
+	{title: `🎮 ${pmenus} ɢᴀᴍᴇ ᴍᴇɴᴜ`, rowId: ".? game", description: "Gamenya seru seru lho >-<"},
+	{title: `🧩 ${pmenus} ғᴜɴ ᴍᴇɴᴜ`, rowId: ".? fun", description: "Fitur yang aman untuk keluarga"},
+	{title: `🐚 ${pmenus} ᴋᴇʀᴀɴɢ ᴍᴇɴᴜ`, rowId: ".? kerangajaib", description: "Tanyakan pada ketua club"},
+	{title: `📑 ${pmenus} ǫᴏᴜᴛᴇs ᴍᴇɴᴜ`, rowId: ".? quotes", description: "Random Inspirasi"},
+	{title: `⛩️ ${pmenus} ᴀɴɪᴍᴇ ᴍᴇɴᴜ`, rowId: ".? anime", description: "Kamu wibu ya bang?"},
+	{title: `🔞 ${pmenus} ɴsғᴡ ᴍᴇɴᴜ`, rowId: ".? nsfw", description: "Tch, dasar sagne"},
+	{title: `🌟 ${pmenus} ᴘʀᴇᴍɪᴜᴍ ᴍᴇɴᴜ`, rowId: ".? premium", description: "Only premium Users"},
+	{title: `🎭 ${pmenus} ᴀɴᴏɴʏᴍᴏᴜs ᴍᴇɴᴜ`, rowId: ".? anonymous", description: "Bicara dengan orang tidak dikenal"},
+	{title: `📖 ${pmenus} ᴀʟ-ǫᴜʀᴀɴ ᴍᴇɴᴜ`, rowId: ".? quran", description: "Tobat yuk kak"},
+	{title: `🌎 ${pmenus} ɪɴᴛᴇʀɴᴇᴛ ᴍᴇɴᴊ`, rowId: ".? internet", description: "Cari sesuatu diBOT"},
+  {title: `🌎 ${pmenus} ʙᴇʀɪᴛᴀ ᴍᴇɴᴜ`, rowId: ".? berita", description: "Cari berita terupdate"},
+	{title: `📩 ${pmenus} ᴅᴏᴡɴʟᴏᴀᴅᴇʀ ᴍᴇɴʜ`, rowId: ".? downloader", description: "Download sesuatu diBOT"},
 	{title: `🎨 ${pmenus} sᴛɪᴋᴇʀs ᴍᴇɴᴜ`, rowId: ".? stiker", description: "Buat Sticker diBOT"},
 	{title: `✏️ ${pmenus} ɴᴜʟɪs ᴍᴇɴᴜ`, rowId: ".? nulis", description: "Nulis kok males kak?"},
 	{title: `🎧 ${pmenus} ᴀᴜᴅɪᴏ ᴍᴇɴᴜ`, rowId: ".? audio", description: "Ubah Audio dengan Filter"},
@@ -257,7 +248,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	{title: `🛠️ ${pmenus} ᴛᴏᴏʟs ᴍᴇɴᴜ`, rowId: ".? tools", description: "Mungkin tools ini bisa membantu?"},
 	{title: `ℹ️ ${pmenus} ɪɴғᴏ ᴍᴇɴᴜ`, rowId: ".? info", description: "Info info BOT"},
 	{title: `👩‍💻 ${pmenus} ᴏᴡɴᴇʀ ᴍᴇɴʜ`, rowId: ".? owner", description: "Owner Only!"},
-	{title: `❓ ${pmenus} No Category`, rowId: ".? nocategory", description: "Fitur tanpa kategory!"},
 	]
   },
 ]
@@ -266,7 +256,7 @@ let usrs = db.data.users[m.sender]
 let tek = `
 ┌–––––––––––––––––✥
 ┊${ucapan()} ${conn.getName(m.sender)}*
-┌「 *U s e r  I n f o 克* 」
+┊「 *U s e r  I n f o 克* 」
 ┊↬✗• *ɴᴀᴍᴇ:* ${usrs.registered ? usrs.name : conn.getName(m.sender)}
 ┊↬✗• *ᴛᴀɢs:* @${m.sender.split`@`[0]
 ┊↬✗• *ʟɪᴍɪᴛ:* ${usrs.limit}
